@@ -1,8 +1,6 @@
-# React + Vite
+# First mini Project with React.js
+``I'm Relexsun from FireFlies`` 
+## Todo List
+My convention guide ---> [`Click me`](./Documents/Convention-guide.md)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+My UI ---> [`Click me`](https://www.figma.com/file/tMmHRt60AxTTqAsj9k3LIf/Todo-list(idea-2)?type=design&node-id=9-365&mode=design&t=aS4worREFKc6pZqc-0)
