@@ -5,27 +5,38 @@ import Form from "./Form";
 import Plist from "./Plist";
 
 function App() {
-  const [item, setItem] = useState([])
+  const [task, setTask] = useState([]);
 
-  function handleAddTask (item) {
-    setItem((items) => [item, ...items])
+  function handleAddTask(item) {
+    setTask((items) => [item, ...items]);
   }
   function handleDeleteTask(id) {
-    setItem((items) => items.filter((item) => item.id !== id));
+    setTask((items) => items.filter((item) => item.id !== id));
   }
 
-function handleToggle(id) {
-  setItem((items) =>
-    items.map((item) =>
-      item.id === id ? { ...item, complete: !item.complete } : item
-    )
-  );
-}
+  function handleToggle(id) {
+    setTask((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, complete: !item.complete } : item
+      )
+    );
+  }
+
+  function handleSaveEdit(id, newTitle) {
+    setTask((item) =>
+      item.map((it) => (it.id === id ? { ...it, title: newTitle } : it))
+    );
+  }
 
   return (
     <div className="app">
       <Form onAddTodo={handleAddTask} />
-      <Plist items={item} onDeleteTask={handleDeleteTask} onToggle={handleToggle}/>
+      <Plist
+        task={task}
+        onDeleteTask={handleDeleteTask}
+        onToggle={handleToggle}
+        onSaveEdit={handleSaveEdit}
+      />
     </div>
   );
 }

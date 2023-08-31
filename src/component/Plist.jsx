@@ -1,10 +1,18 @@
+
 import Task from "./Task";
-export default function Plist({ items, onDeleteTask, onToggle }) {
+export default function Plist({ task, onDeleteTask, onToggle, onSaveEdit }) {
+  
   return (
     <div className="ul-container">
       <ul>
-        {items.map((item) => (
-          <Task item={item} key={item.id} onDeleteTask={onDeleteTask} onToggle={onToggle}/>
+        {task.map((item) => (
+          <Task 
+          task={item} 
+          key={item.id} 
+          onDeleteTask={onDeleteTask} 
+          onToggle={onToggle}
+          onSaveEdit={onSaveEdit}
+          />
         ))}
       </ul>
     </div>

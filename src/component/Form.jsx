@@ -9,7 +9,7 @@ export default function Form({onAddTodo}) {
 
     if(!title) return;
     setTitle("")
-    const newTodo = {id: Date.now(), title, completed: false}
+    const newTodo = {id: Date.now(), title: title, completed: false}
     onAddTodo(newTodo)
   }
 
