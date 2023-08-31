@@ -14,10 +14,18 @@ function App() {
     setItem((items) => items.filter((item) => item.id !== id));
   }
 
+function handleToggle(id) {
+  setItem((items) =>
+    items.map((item) =>
+      item.id === id ? { ...item, complete: !item.complete } : item
+    )
+  );
+}
+
   return (
     <div className="app">
       <Form onAddTodo={handleAddTask} />
-      <Plist items={item} onDeleteTask={handleDeleteTask} />
+      <Plist items={item} onDeleteTask={handleDeleteTask} onToggle={handleToggle}/>
     </div>
   );
 }
