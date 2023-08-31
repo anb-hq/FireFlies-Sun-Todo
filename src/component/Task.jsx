@@ -1,7 +1,11 @@
 import { PiTrashSimple } from "react-icons/pi";
+import { LuFileEdit } from "react-icons/lu";
+import { MdSaveAlt } from "react-icons/md";
+import { BsCheckLg } from "react-icons/bs";
+
 import { useState } from "react";
 
-export default function Task({ task, onDeleteTask, onToggle, onSaveEdit }) {
+export default function Task({ task, onDeleteTask, onToggle, onSaveEdit, show }) {
   const [editTitle, setEditTitle] = useState("");
   const [editingItemId, setEditingItemId] = useState(null);
 
@@ -18,8 +22,10 @@ export default function Task({ task, onDeleteTask, onToggle, onSaveEdit }) {
   }
 
   return (
-    <li>
-      <div onClick={() => onToggle(task.id)} className="check-button"></div>
+    <li className={!task.complete ? "" : "completed"}>
+      <div onClick={() => onToggle(task.id)} className="check-button">
+        {task.complete ? <BsCheckLg className="green-tick"></BsCheckLg> : ""}
+      </div>
       <div className="list-input">
         {editingItemId === task.id ? (
           <input
@@ -41,23 +47,23 @@ export default function Task({ task, onDeleteTask, onToggle, onSaveEdit }) {
         )}
       </div>
       <PiTrashSimple onClick={() => onDeleteTask(task.id)} className="trash" />
+
       {editingItemId === task.id ? (
         <>
-          <button
+          <MdSaveAlt
+            className="edit-button"
             onClick={() =>
               handleSaveEdit(task.id, !editTitle ? task.title : editTitle)
             }
           >
             Save
-          </button>
+          </MdSaveAlt>
         </>
       ) : (
-        <button
+        <LuFileEdit
           onClick={() => handleStartEdit(task.id, task.title)}
           className="edit-button"
-        >
-          Edit
-        </button>
+        ></LuFileEdit>
       )}
     </li>
   );

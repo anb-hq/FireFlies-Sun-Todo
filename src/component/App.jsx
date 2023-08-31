@@ -30,7 +30,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📌 WAKE UP</h1>
+      <h1>📌 Do it now </h1>
+      <div className="container">
       <Form onAddTodo={handleAddTask} />
       <Plist
         task={task}
@@ -38,6 +39,7 @@ function App() {
         onToggle={handleToggle}
         onSaveEdit={handleSaveEdit}
       />
+      </div>
     </div>
   );
 }

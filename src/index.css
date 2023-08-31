@@ -17,15 +17,29 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'IBM Plex Mono', monospace;
+  overflow-wrap: break-word;
 }
 
 body {
-  height: 100vh;
+  max-width: 1440px;
+  min-height: 100vh;
   background-color: var(--Midnight-Blue);
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .app {
   padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  color: var(--Light-Gray);
 }
 
 input {
@@ -44,8 +58,8 @@ ul {
 h1 {
   color: var(--Light-Gray);
   font-size: 48px;
-  border: solid white;
   width: 100%;
+  margin: 1em 0;
 }
 
 /* ================ form ===================== */
@@ -57,32 +71,48 @@ h1 {
   align-items: center;
   justify-content: space-between;
   padding-left: 1em;
-  max-width: 40em;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .input-form {
   background: none;
   border: none;
   height: 4em;
-  width: 20em;
+  min-width: 23em;
   background-color: none;
+  padding-left: 1em;
 }
 
 
 
 .plus-button {
-  height: 4em;
-  width: 4em;
+  height: 3.5em;
+  width: 3.5em;
+  cursor: pointer;
+  background-color: #b5b5b5;
+  margin-right: 5px;
 }
 .button-form {
   font-size: 2.5em;
+  margin-top: .1em;
+  color: var(--Light-Gray);
 }
 
 /* ================= plist =============== */
 
+.ul-container {
+  margin-top: 2em;
+}
 
+.toggle {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
 
-
+.toggle-switch {
+  color: var(--Light-Gray);
+}
 
 
 
@@ -96,13 +126,25 @@ li {
   background-color: var(--Light-Gray);
   border-radius: 100px;
   height: 4em;
+  cursor: pointer;
+  transition: .3s ease-in-out;
   margin-top: 1em;
+  overflow: hidden;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+.green-tick {
+color: var(--Kelly-Green);
 }
 
 .task-text {
   width: 13em;
   overflow: hidden;
   padding-right: 1em;
+
 }
 
 .trash {
@@ -111,17 +153,34 @@ li {
 }
 
 .edit-button {
-  width: 4em;
-  height: 4em;
+  width: 1.5em;
+  height: 1.5em;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--Cinnabar-Red);
-  background-color: var(--Light-Gray);
+  color: rgb(210, 151, 0);
+  cursor: pointer;
+  justify-self: end;
+  margin-right: 1em;
 }
 
 .check-button {
-  border: solid var(--Dark-Slate-Blue) .1em;
+  border: solid var(--Kelly-Green) .1em;
   height: 1.5em;
   width: 1.5em;
   border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completed {
+  background-color: var(--Aqua-Haze);
+  text-decoration: line-through;
+}
+.completed-button {
+  border: #00A642;
+}
+
+.hidden {
+  display: none;
 }
