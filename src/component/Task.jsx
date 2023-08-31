@@ -19,7 +19,7 @@ export default function Task({ task, onDeleteTask, onToggle, onSaveEdit }) {
 
   return (
     <li>
-      <input type="checkbox" onClick={() => onToggle(task.id)} />
+      <div onClick={() => onToggle(task.id)} className="check-button"></div>
       <div className="list-input">
         {editingItemId === task.id ? (
           <input
@@ -40,7 +40,7 @@ export default function Task({ task, onDeleteTask, onToggle, onSaveEdit }) {
           </div>
         )}
       </div>
-      <PiTrashSimple onClick={() => onDeleteTask(task.id)} className="trash"/>
+      <PiTrashSimple onClick={() => onDeleteTask(task.id)} className="trash" />
       {editingItemId === task.id ? (
         <>
           <button
@@ -52,7 +52,10 @@ export default function Task({ task, onDeleteTask, onToggle, onSaveEdit }) {
           </button>
         </>
       ) : (
-        <button onClick={() => handleStartEdit(task.id, task.title)} className="edit-button">
+        <button
+          onClick={() => handleStartEdit(task.id, task.title)}
+          className="edit-button"
+        >
           Edit
         </button>
       )}

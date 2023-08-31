@@ -92,7 +92,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2em;
+  padding-left: 1em;
   background-color: var(--Light-Gray);
   border-radius: 100px;
   height: 4em;
@@ -119,3 +119,9 @@ li {
   background-color: var(--Light-Gray);
 }
 
+.check-button {
+  border: solid var(--Dark-Slate-Blue) .1em;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 100px;
+}
