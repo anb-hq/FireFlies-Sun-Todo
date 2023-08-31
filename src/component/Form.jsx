@@ -15,15 +15,15 @@ export default function Form({onAddTodo}) {
 
   return (
     <form action="" onSubmit={handleSubmit}>
-      <div className="">
+      <div className="form">
       <input type="text" 
       placeholder="Todo list" 
       value={title}
       onChange={(e) => setTitle(e.target.value)}
-      
+      className="input-form"
       />
-      <button>
-        <AiOutlinePlus />
+      <button className="plus-button">
+        <AiOutlinePlus className="button-form"/>
       </button>
       </div>
     </form>

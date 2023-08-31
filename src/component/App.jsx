@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>📌 WAKE UP</h1>
       <Form onAddTodo={handleAddTask} />
       <Plist
         task={task}
