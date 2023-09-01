@@ -3,6 +3,7 @@ import "../index.css";
 import "../Style/App.css";
 import Form from "./Form";
 import Plist from "./Plist";
+import '../Style/App.css'
 
 function App() {
   const [task, setTask] = useState([]);
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📌 Do it now </h1>
+      <h1>📌 Sun Todo </h1>
       <div className="container">
       <Form onAddTodo={handleAddTask} />
       <Plist

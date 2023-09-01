@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Task from "./Task";
-import {AiOutlineDown} from 'react-icons/ai'
+import { AiOutlineDown } from "react-icons/ai";
+import '../Style/Plist.css'
 export default function Plist({ task, onDeleteTask, onToggle, onSaveEdit }) {
   const completedItems = task.filter((item) => item.complete);
   const allComItems = [...completedItems];
@@ -8,7 +9,7 @@ export default function Plist({ task, onDeleteTask, onToggle, onSaveEdit }) {
   const allIncomItems = [...incompleteItems];
 
   const [show, setShow] = useState(false);
-console.log(show);
+  console.log(show);
   return (
     <div className="ul-container">
       <p> tasks-------------------</p>

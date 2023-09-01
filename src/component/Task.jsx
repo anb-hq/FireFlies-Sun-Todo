@@ -2,6 +2,7 @@ import { PiTrashSimple } from "react-icons/pi";
 import { LuFileEdit } from "react-icons/lu";
 import { MdSaveAlt } from "react-icons/md";
 import { BsCheckLg } from "react-icons/bs";
+import '../Style/Task.css'
 
 import { useState } from "react";
 

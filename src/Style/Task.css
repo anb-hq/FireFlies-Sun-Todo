@@ -1,0 +1,69 @@
+/* ============== task =================== */
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1em;
+  background-color: var(--Light-Gray);
+  border-radius: 100px;
+  height: 4em;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  margin-top: 1em;
+  overflow: hidden;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  background-color: rgb(255, 240, 129);
+}
+
+.green-tick {
+color: var(--Kelly-Green);
+}
+
+.task-text {
+  width: 13em;
+  overflow: hidden;
+  padding-right: 1em;
+
+}
+
+.trash {
+  color: var(--Cinnabar-Red);
+  transform: scale(1.3);
+}
+
+.edit-button {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(210, 151, 0);
+  cursor: pointer;
+  justify-self: end;
+  margin-right: 1em;
+}
+
+.check-button {
+  border: solid var(--Kelly-Green) .1em;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completed {
+  background-color: var(--Aqua-Haze);
+  text-decoration: line-through;
+}
+.completed-button {
+  border: #00A642;
+}
+
+.hidden {
+  display: none;
+}

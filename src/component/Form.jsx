@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
+import '../Style/Form.css'
 
 export default function Form({ onAddTodo }) {
   const [title, setTitle] = useState("");
