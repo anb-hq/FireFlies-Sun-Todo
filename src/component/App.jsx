@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../index.css";
 import "../Style/App.css";
 import Form from "./Form";
@@ -7,6 +7,17 @@ import '../Style/App.css'
 
 function App() {
   const [task, setTask] = useState([]);
+
+  useEffect(() => {
+    const storedItems = JSON.parse(
+      localStorage.getItem("task") || JSON.stringify([])
+    );
+    setTask(storedItems);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("task", JSON.stringify(task));
+  }, [task]);
 
   function handleAddTask(item) {
     setTask((items) => [item, ...items]);
