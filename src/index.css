@@ -47,6 +47,11 @@ button{
 
 ul {
   list-style: none;
+  border: none;
+  max-height: 500px;
+  overflow-y: scroll;
 }
-
+ul::-webkit-scrollbar {
+  width: 5px;
+}
 
